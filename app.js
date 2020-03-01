@@ -158,6 +158,11 @@ app.post("/passcode", function(req, res)
 	});
 });
 
+app.get("*", function(req, res)
+	   {
+	res.redirect("/");
+});
+
 app.post("/newItem", function(req, res)
 {
 	let sampleFile = req.files.slika;
