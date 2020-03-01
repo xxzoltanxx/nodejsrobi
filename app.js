@@ -208,15 +208,15 @@ function displayOnSite(searchTerm, res, page)
 				for (var i = 0; i < data.length; ++i)
 					{
 						var cell = data[i];
-						if (cell.title.includes(searchTerm))
+						if (cell.title.toLowerCase().includes(searchTerm.toLowerCase()))
 							{
 								selected.push(cell);
 							}
-						else if (cell.tags.includes(searchTerm))
+						else if (cell.tags.toLowerCase().includes(searchTerm.toLowerCase()))
 							{
 								selected.push(cell);
 							}
-						else if (cell.lines.includes(searchTerm))
+						else if (cell.lines.toLowerCase().includes(searchTerm.toLowerCase()))
 							{
 								selected.push(cell);
 							}
