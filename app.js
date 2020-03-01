@@ -4,7 +4,7 @@ var bodyParser = require("body-parser");
 var cookieSession = require("cookie-session");
 var fileUpload = require("express-fileupload");
 
-mongoose.connect("mongodb://localhost/fhc");
+mongoose.connect("mongodb+srv://fhc:Af0035182443@cluster0-g7xnk.mongodb.net/test?retryWrites=true&w=majority");
 var adminScheme = mongoose.Schema(
 {
 	email: String,
