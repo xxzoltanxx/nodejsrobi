@@ -3,6 +3,7 @@ var mongoose = require("mongoose");
 var bodyParser = require("body-parser");
 var cookieSession = require("cookie-session");
 var fileUpload = require("express-fileupload");
+var nodemailer = require("nodemailer");
 
 mongoose.connect("mongodb+srv://fhc:Af0035182443@cluster0-g7xnk.mongodb.net/fhc?retryWrites=true&w=majority", {useNewUrlParser: "true", useCreateIndex: "true"}).then(function() { console.log("connected")});
 var adminScheme = mongoose.Schema(
@@ -18,6 +19,14 @@ var karticaScheme = mongoose.Schema(
 	lines : String,
 	price : String,
 	picture: String
+});
+
+var transporter = nodemailer.createTransport({
+ service: 'gmail',
+ auth: {
+        user: 'fhcmailer@gmail.com',
+        pass: 'RF493395'
+    }
 });
 
 var Admin = mongoose.model("admin", adminScheme);
@@ -42,6 +51,18 @@ app.get("/", function(req, res)
 	res.render("index.ejs", {logedIn: req.session.loggedIn });
 });
 
+app.post("/mail", function(req, res)
+		 {
+	const mailOptions = {
+  from: req.body.email, // sender address
+  to: 'robert.franjcic@gmail.com', // list of receivers
+  subject: 'Nova poruka s web sitea: ' + req.body.subject, // Subject line
+  html: req.body.name + ": " + req.body.email + ": " + req.body.message// plain text body
+};
+	transporter.sendMail(mailOptions, function (err, info) {
+		res.redirect("/");
+});
+});
 app.get("/panel", function(req, res)
 	   {
 	if (!req.session.loggedIn)

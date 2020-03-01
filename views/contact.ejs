@@ -56,21 +56,109 @@
 </nav>
 <div class = "container opacityNil">
 	<div class = "row">
-      <div class= " col-md-6 col-xs-12">
-      <h1 id = "kontaktHeader">Kontakt:</h1>
-      <hr>
-      <p class = "aboutPara2">Kvaliteta. Povoljne cijene.</p>
-      <p class = "aboutPara2">FHC d.o.o.</p>
-      <p class = "aboutPara2">Butkovec 54E</p>
-      <p class = "aboutPara2">42225 Breznički Hum</p>
-      <p class = "aboutPara2">OIB: 73396822478</p>
-      <hr>
+      <div class= " col-md-12 col-xs-12">
+<!--Section: Contact v.2-->
+<section class="mb-4">
 
-      <p class = "aboutPara2">Tel./Fax.: 042/618-123</p>
-      <p class = "aboutPara2">Mob.: 098/493-395 - Robert Franjčić</p>
-      <p class = "aboutPara2">E-mail: <a href="mailto:robert.franjcic@gmail.com">robert.franjcic@gmail.com</a></p>
+    <!--Section heading-->
+    <h1 class="h1-responsive font-weight-bold text-center my-4">Kontaktirajte nas</h1>
+    <!--Section description-->
+    <p class="text-center w-responsive mx-auto mb-5">Da li imate pitanja? Ne ustrucavajte se, posaljite nam upit!</p>
+
+    <div class="row">
+
+        <!--Grid column-->
+        <div class="col-md-9 mb-md-0 mb-5">
+            <form id="contact-form" name="contact-form" action="/mail" method="POST">
+
+                <!--Grid row-->
+                <div class="row">
+
+                    <!--Grid column-->
+                    <div class="col-md-6">
+                        <div class="md-form mb-0">
+                            <input type="text" id="name" name="name" class="form-control">
+                            <label for="name" class="">Vase ime</label>
+                        </div>
+                    </div>
+                    <!--Grid column-->
+
+                    <!--Grid column-->
+                    <div class="col-md-6">
+                        <div class="md-form mb-0">
+                            <input type="text" id="email" name="email" class="form-control">
+                            <label for="email" class="">Vas email</label>
+                        </div>
+                    </div>
+                    <!--Grid column-->
+
+                </div>
+                <!--Grid row-->
+
+                <!--Grid row-->
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="md-form mb-0">
+                            <input type="text" id="subject" name="subject" class="form-control">
+                            <label for="subject" class="">Naslov</label>
+                        </div>
+                    </div>
+                </div>
+                <!--Grid row-->
+
+                <!--Grid row-->
+                <div class="row">
+
+                    <!--Grid column-->
+                    <div class="col-md-12">
+
+                        <div class="md-form">
+                            <textarea type="text" id="message" name="message" rows="5" class="form-control md-textarea"></textarea>
+                            <label for="message">Poruka</label>
+                        </div>
+
+                    </div>
+                </div>
+                <!--Grid row-->
+
+            </form>
+
+            <div class="text-center text-md-left">
+                <a class="btn btn-primary" onclick="document.getElementById('contact-form').submit();">Posalji</a>
+            </div>
+            <div class="status"></div>
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-md-3 text-center">
+            <ul class="list-unstyled mb-0">
+                <li><i class="fas fa-map-marker-alt fa-2x"></i>
+                    <p>Butkovec 54d, 42225 Breznicki Hum</p>
+                </li>
+
+                <li><i class="fas fa-phone mt-4 fa-2x"></i>
+                    <p>098/493-395</p>
+                </li>
+
+                <li><i class="fas fa-envelope mt-4 fa-2x"></i>
+                    <p>robert.franjcic@gmail.com</p>
+                </li>
+            </ul>
+        </div>
+        <!--Grid column-->
+
     </div>
-		<div class= "col-md-6 col-xs-12">
+
+</section>
+<!--Section: Contact v.2-->
+    </div>
+		
+		<div class= "col-md-12 col-xs-12">
+			<h1 class="text-center">
+				Gdje se nalazimo:
+			</h1>
+			<hr>
           <div id="map" class="map"></div>
     <script type="text/javascript">
       var map = new ol.Map({

@@ -178,3 +178,8 @@ animation-fill-mode: forwards;
 	display: flex;
 	flex-wrap: wrap;
 }
+
+.btn-primary
+{
+	margin-bottom: 20px;
+}
