@@ -229,6 +229,6 @@ function displayOnSiteAll(res, page, pages)
 	})
 }
 
-app.listen(3000, function() {
+app.listen(process.ENV.port, function() {
 	console.log("started listening");
 })
