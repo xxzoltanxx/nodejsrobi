@@ -1,0 +1,57 @@
+<%- include("partials/header.ejs") %>
+<body>
+	<nav class="navbar navbar-default">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+     <a href="/"><img class="navbar-brand" src = "logo.png"></a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    	 	<ul class = "nav navbar-nav">
+    	 	<li class = "change"><a href="/AboutUs">O nama</a></li>
+    		<li class = "change"><a href="/services" id="current">Usluge</a></li>
+    		<li class = "change"><a href="/contact">Kontakt</a></li>
+    	</ul>
+    	<ul class = "nav navbar-nav navbar-right">
+    		<li class = "change"><a href="/najam" id="najam">Najam Opreme<span class = "glyphicon glyphicon-shopping-cart"></span></a></li>
+    	</ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+<div class = "container opacityNil">
+	<div class = "row">
+		<div class= "col-xs-12">
+			<div id = "contentAbout">
+			<h1 id = "headerAboutUs">Naše usluge...</h1>
+			<hr>
+			<p class = "aboutPara">Kvaliteta. Povoljne cijene.</p>
+      <p class = "aboutPara">
+        FHC d.o.o. spreman je ispuniti sve vaše potrebe . Bilo da tražite nekoliko korisnih savjeta ili trebate iskusnog stručnjaka za potpuno upravljanje projektom - imamo alate i iskustvo za jamčenje uspjeha. Pregledajte naše usluge u nastavku i stupite u kontakt još danas!
+      </p>
+		</div>
+		 </div>
+	</div>
+</div>
+<div class = "container kartice">
+  <div class = "row">
+    <div class= "col-xl-4 col-lg-4 col-md-6 col-sm-12  col-xs-12 imageSer"><img src="img0006.gif" class="center-block"></div>
+    <div class= "col-xl-4 col-lg-4 col-md-6 col-sm-12  col-xs-12 imageSer"><img class="center-block" src="img0007.gif"></div>
+    <div class= "col-xl-4 col-lg-4 col-md-6 col-sm-12  col-xs-12 imageSer"><img src="img0005.png" class="center-block"></div>
+  </div>
+</div>
+<div class = "container">
+  <div class = "row">
+    <p id="lastElement">Nijedan projekt nije prevelik ili premali za FHC d.o.o . Kontaktirajte nas još danas za početno savjetovanje.</p>
+  </div>
+</div>
+<%- include("partials/footerOther.ejs") %>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>FHC d.o.o</title>
+  <meta name="description" content="Izvedba gradevinskih radova i najam gradjevinske opreme.">
+  <meta name="keywords" content="najam, gradjevina, gradilista, adaptacije">
+  <meta name="author" content="FHC d.o.o">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  	<link href="https://fonts.googleapis.com/css?family=Oswald:400,700|Source+Sans+Pro&display=swap" rel="stylesheet">
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  	<script
+  src="https://code.jquery.com/jquery-2.2.4.min.js"
+  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+  crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.2.1/css/ol.css" type="text/css">
+    <style>
+      .map {
+        height: 400px;
+        width: 100%;
+      }
+    </style>
+    <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.2.1/build/ol.js"></script>
+    <title>OpenLayers example</title>
+
+	<link rel="stylesheet" type="text/css" href="homePage.css">
+</head>
+<body>
+	<nav class="navbar navbar-default">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+     <a href="/"><img class="navbar-brand" src = "logo.png"></a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    	 	<ul class = "nav navbar-nav">
+    	 	<li class = "change"><a href="/AboutUs">O nama</a></li>
+    		<li class = "change"><a href="/services" >Usluge</a></li>
+    		<li class = "change"><a href="/contact" id="current">Kontakt</a></li>
+    	</ul>
+    	<ul class = "nav navbar-nav navbar-right">
+    		<li class = "change"><a href="/najam" id="najam">Najam Opreme<span class = "glyphicon glyphicon-shopping-cart"></span></a></li>
+    	</ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+<div class = "container opacityNil">
+	<div class = "row">
+      <div class= " col-md-6 col-xs-12">
+      <h1 id = "kontaktHeader">Kontakt:</h1>
+      <hr>
+      <p class = "aboutPara2">Kvaliteta. Povoljne cijene.</p>
+      <p class = "aboutPara2">FHC d.o.o.</p>
+      <p class = "aboutPara2">Butkovec 54E</p>
+      <p class = "aboutPara2">42225 Breznički Hum</p>
+      <p class = "aboutPara2">OIB: 73396822478</p>
+      <hr>
+
+      <p class = "aboutPara2">Tel./Fax.: 042/618-123</p>
+      <p class = "aboutPara2">Mob.: 098/493-395 - Robert Franjčić</p>
+      <p class = "aboutPara2">E-mail: <a href="mailto:robert.franjcic@gmail.com">robert.franjcic@gmail.com</a></p>
+    </div>
+		<div class= "col-md-6 col-xs-12">
+          <div id="map" class="map"></div>
+    <script type="text/javascript">
+      var map = new ol.Map({
+        target: 'map',
+        layers: [
+          new ol.layer.Tile({
+            source: new ol.source.OSM()
+          })
+        ],
+        view: new ol.View({
+          center: ol.proj.fromLonLat([16.261400,46.103020]),
+          zoom: 14
+        })
+      });
+var marker = new ol.Feature({
+  geometry: new ol.geom.Point(
+    ol.proj.fromLonLat([16.261400,46.103020])
+  ),  // Cordinates of New York's Town Hall
+});
+var vectorSource = new ol.source.Vector({
+  features: [marker]
+});
+var markerVectorLayer = new ol.layer.Vector({
+  source: vectorSource,
+});
+map.addLayer(markerVectorLayer);
+    </script>
+		</div>
+		 </div>
+	</div>
+</div>
+<div class="container" id="footer">
+  <div class="row">
+  <hr>
+    <div class="col-lg-12">
+      <div class="col-md-8">  
+      </div>
+      <div class="col-md-4">
+        <p class="muted pull-right">© 2020 FHC d.o.o. Sva prava zadrzana</p>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+<script type="text/javascript" src="otherPageScript.js"></script>
+</html>

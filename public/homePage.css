@@ -1,0 +1,180 @@
+		#background
+		{
+			opacity : 0;
+			width: 100%;
+			height: auto;
+			min-width: 900px;
+			position: fixed;
+			transition: opacity 0.7s;
+		}
+		#content
+		{
+			text-align: center;
+			padding-top: 25%;
+			color: #FFFFFF;
+		}
+		
+
+		h1
+		{
+			font-weight:700;
+			font-family: 'Oswald', sans-serif;
+			color:#FFFFFF;
+		}
+		p
+		{
+			font-family: 'Source Sans Pro', sans-serif;
+			color:#FFFFFF;
+		}
+		label
+		{
+			font-family: 'Source Sans Pro', sans-serif;
+			color:#FFFFFF;
+		}
+		#najam
+		{
+			font-weight: bold;
+			font-size: 17px;
+		}
+		#footer
+		{
+			padding-top:21%;
+		}
+
+		#dontOpacity
+		{
+			opacity: 1.0;
+		}
+		.change
+		{
+			transition: background-color 0.3s;
+		}
+		.change:hover
+		{
+			background-color: lightgray;
+		}
+/*About us
+*/
+.navbar-default
+{
+}
+.opacityNil
+{
+	opacity: 0;
+}
+
+#current
+{
+	font-weight: bold;
+}
+body
+{
+background: linear-gradient(270deg, #ffd89b, #19547b);
+background-size: 400% 400%;
+
+-webkit-animation: AnimationName 3s ease;
+-moz-animation: AnimationName 3s ease;
+animation: AnimationName 3s ease;
+animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    100%{background-position:50% 50%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    100%{background-position:50% 50%}
+}
+@keyframes AnimationName {
+    0%{background-position:0% 50%}
+    100%{background-position:50% 50%}
+}
+
+#headerAboutUs
+{
+	text-align: center;
+}
+.aboutPara
+{
+	padding-top: 100px;
+}
+.kartice
+{
+	padding-top: 5%;
+}
+#lastElement
+{
+	padding-top:5%;
+	text-align:center;
+}
+#img2
+{
+	width:100%;
+	height:auto;
+}
+#currentNajam
+{
+	font-weight: bold;
+	font-size: 17px;
+	color: #000000;
+}
+.panelImage
+{
+	width: 100%;
+	height: auto;
+}
+.price
+{
+	font-weight: bold;
+	color: blue;
+	text-align: center;
+}
+#trashCan
+{
+	float: right;
+}
+
+.bg-primary
+{
+	padding-left: 50px;
+	line-height: 50px;
+	border-radius: 20px 0px;
+}
+.bg-primary:hover
+{
+	background-color: green;
+}
+.boldedIt
+{
+	padding-left: 5px;
+	padding-right: 5px;
+	font-weight: bolder;
+	font-size: 15px;
+	float: right;
+	color: rgb(245,245,245);
+	border-left: 1px solid black;
+	border-right: 1px solid black;
+}
+.restOfIt
+{
+	padding-left: 5px;
+	color: white;
+	float: right;
+}
+#backgroundCounters
+{
+	background-color: rgb(190,190,190);
+	border-radius: 5px 5px 5px 5px;
+}
+
+.imageSer
+{
+	padding-bottom: 20px;
+}
+
+.flexify
+{
+	display: flex;
+	flex-wrap: wrap;
+}
