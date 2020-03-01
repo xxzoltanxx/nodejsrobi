@@ -229,6 +229,8 @@ function displayOnSiteAll(res, page, pages)
 	})
 }
 
-app.listen(process.ENV.port, function() {
+const PORT = process.env.PORT || 3000;
+
+app.listen(port, function() {
 	console.log("started listening");
 })
