@@ -68,6 +68,12 @@
 		<%})%>
 	</ul>
       <p class="price"><%= entry.price %></p>
+	  <form action="/contact" method = "GET">
+     <input type="hidden"
+            name="oglasTitle"
+            value="<%= entry.title %>">
+     <button class="btn btn-primary">Posalji upit!</button>
+</form>
   </div></div>
 </div>
 		 </div>

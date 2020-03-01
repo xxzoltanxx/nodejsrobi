@@ -113,7 +113,10 @@ app.get("/services", function(req, res)
 
 app.get("/contact", function(req, res)
 {
-		res.render("contact.ejs");
+	if (req.query)
+		res.render("contact.ejs", {oglasTitle : req.query.oglasTitle});
+	else
+		res.render("contact.ejs", {oglasTitle : null});
 });
 
 app.get("/passcode", function(req, res)

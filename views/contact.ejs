@@ -99,7 +99,11 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="md-form mb-0">
-                            <input type="text" id="subject" name="subject" class="form-control" required>
+                            <input type="text" id="subject" name="subject" class="form-control" <% if (oglasTitle) { %>
+									   value = "<%= "Upit: " + oglasTitle %>"
+								   <% } %>
+									   
+									   required>
                             <label for="subject" class="">Naslov</label>
                         </div>
                     </div>
@@ -113,7 +117,11 @@
                     <div class="col-md-12">
 
                         <div class="md-form">
-                            <textarea type="text" id="message" name="message" rows="5" class="form-control md-textarea" required></textarea>
+                            <textarea type="text" id="message" name="message" rows="5" class="form-control md-textarea" required>
+<% if (oglasTitle) { %>
+<%= "Dobar dan, interesira me najam za " +  oglasTitle %>
+<% } %>
+</textarea>
                             <label for="message">Poruka</label>
                         </div>
 
