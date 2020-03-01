@@ -158,11 +158,6 @@ app.post("/passcode", function(req, res)
 	});
 });
 
-app.get("*", function(req, res)
-	   {
-	res.redirect("/");
-});
-
 app.post("/newItem", function(req, res)
 {
 	let sampleFile = req.files.slika;
@@ -185,6 +180,11 @@ app.get("/najam", function(req, res)
 			console.log("not hit")
 			displayOnSiteAll(res, req.query.page);
 		}
+});
+
+app.get("*", function(req, res)
+	   {
+	res.redirect("/");
 });
 
 function displayOnSite(searchTerm, res, page)
