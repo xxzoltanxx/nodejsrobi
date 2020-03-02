@@ -227,7 +227,7 @@ function displayOnSite(searchTerm, res, page)
 				if (selected.length < start + 10)
 					end = selected.length;
 				
-				pages = Math.ceil(data.length / 10);
+				pages = Math.ceil(selected.length / 10);
 				res.render("najam.ejs", {data: selected.slice(start, end), page: page, pages: pages, searchTerm: searchTerm});
 			}
 	})
